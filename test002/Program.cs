@@ -15,11 +15,21 @@
                 double hight = 0.0;
                 Console.Write("ใส่น้ำหนัก: ");
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
-                weight = Convert.ToDouble(Console.ReadLine());
+                //weight = Convert.ToDouble(Console.ReadLine());
+                if (double.TryParse(Console.ReadLine(), out weight) == false)
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    continue;
+                }
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("ใส่ส่วนสูง: ");
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
-                hight = Convert.ToDouble(Console.ReadLine());
+                //hight = Convert.ToDouble(Console.ReadLine());
+                if (!double.TryParse(Console.ReadLine(), out hight))
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    continue;
+                }
                 Console.ForegroundColor = ConsoleColor.White;
                 line("-", 40);
                 conm(weight, hight);
