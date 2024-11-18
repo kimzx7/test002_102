@@ -10,7 +10,6 @@
             while (true)
             {
 
-                //iasdias
                 line("-", 40);
                 double weight = 0.0;
                 double hight = 0.0;
